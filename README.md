@@ -1,3 +1,7 @@
+### Topology 
+
+![Image ](https://github.com/NileshChandekar/eve_labs/blob/master/images/n1.png)
+
 ### Router Configureation 
 
 ### Below is a very basic configuration example that will provide a NAT gateway for a device with two interfaces.
@@ -47,3 +51,25 @@ set service dns forwarding listen-on "eth0"
 ~~~
 
 
+![Image ](https://github.com/NileshChandekar/eve_labs/blob/master/images/n2.png)
+
+
+
+![Image ](https://github.com/NileshChandekar/eve_labs/blob/master/images/n3.png)
+
+
+
+![Image ](https://github.com/NileshChandekar/eve_labs/blob/master/images/n4.png)
+
+
+
+
+![Image ](https://github.com/NileshChandekar/eve_labs/blob/master/images/n5.png)
+
+
+
+![Image ](https://github.com/NileshChandekar/eve_labs/blob/master/images/n6.png)
+
+
+
+![Image ](https://github.com/NileshChandekar/eve_labs/blob/master/images/n7.png)
