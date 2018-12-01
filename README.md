@@ -37,10 +37,10 @@ set nat source rule 10 protocol 'all'
 set nat source rule 10 translation address 'masquerade'
 ~~~
 
-### To create routing table 100 and add a new default gateway to be used by traffic matching :
+### To create routing table 10 and add a new default gateway to be used by traffic matching :
 
 ~~~
-set protocols static table 100 route 0.0.0.0/0 next-hop "192.168.124.1"
+set protocols static table 10 route 0.0.0.0/0 next-hop "192.168.124.1"
 ~~~
 
 
