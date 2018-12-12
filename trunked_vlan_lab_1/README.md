@@ -68,4 +68,47 @@ set service dns forwarding name-server '192.168.124.1'
 set service dns forwarding name-server '8.8.8.8'
 ~~~
 
+### IP Config details 
 
+~~~
+vyos@vyos:~$ ip a
+1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default 
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+    inet 127.0.0.1/8 scope host lo
+       valid_lft forever preferred_lft forever
+    inet6 ::1/128 scope host 
+       valid_lft forever preferred_lft forever
+2: eth0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc pfifo_fast state UP group default qlen 1000
+    link/ether 00:50:00:00:01:00 brd ff:ff:ff:ff:ff:ff
+    inet 192.168.124.162/24 brd 192.168.124.255 scope global eth0
+       valid_lft forever preferred_lft forever
+    inet6 fe80::250:ff:fe00:100/64 scope link 
+       valid_lft forever preferred_lft forever
+3: eth1: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc pfifo_fast state UP group default qlen 1000
+    link/ether 00:50:00:00:01:01 brd ff:ff:ff:ff:ff:ff
+    inet 10.10.10.1/24 brd 10.10.10.255 scope global eth1
+       valid_lft forever preferred_lft forever
+    inet6 fe80::250:ff:fe00:101/64 scope link 
+       valid_lft forever preferred_lft forever
+vyos@vyos:~$ 
+~~~
+
+
+### Able to ping to Gateway and Google. 
+
+~~~
+vyos@vyos:~$ ping 192.168.124.1 
+PING 192.168.124.1 (192.168.124.1) 56(84) bytes of data.
+64 bytes from 192.168.124.1: icmp_req=1 ttl=64 time=0.310 ms
+64 bytes from 192.168.124.1: icmp_req=2 ttl=64 time=3.41 ms
+64 bytes from 192.168.124.1: icmp_req=3 ttl=64 time=0.825 ms
+~~~
+
+
+~~~
+vyos@vyos:~$ ping google.com
+PING google.com (216.58.200.142) 56(84) bytes of data.
+64 bytes from maa05s10-in-f14.1e100.net (216.58.200.142): icmp_req=1 ttl=54 time=46.6 ms
+64 bytes from maa05s10-in-f14.1e100.net (216.58.200.142): icmp_req=2 ttl=54 time=52.5 ms
+64 bytes from maa05s10-in-f14.1e100.net (216.58.200.142): icmp_req=3 ttl=54 time=70.9 ms
+~~~
