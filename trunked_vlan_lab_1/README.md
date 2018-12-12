@@ -170,6 +170,7 @@ ctrl.example.com
 
 ### Check IP 
 
+~~~
 [root@ctrl ~]# ip a
 1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
     link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
@@ -194,7 +195,7 @@ ctrl.example.com
 [root@ctrl ~]# 
 ~~~
 
-### Network Configuration `` ctrl.example.com `` 
+### Network Configuration  ``ctrl.example.com``
 
 ~~~
 [root@ctrl ~]# cat /etc/sysconfig/network-scripts/ifcfg-eth1.10 
@@ -211,7 +212,7 @@ NETWORK=10.1.1.0
 ~~~
 
 
-### Check Hostname `` cmpt.example.com ``
+### Check Hostname  ``cmpt.example.com``
 
 ~~~
 [root@cmpt network-scripts]# hostname
@@ -246,7 +247,7 @@ cmpt.example.com
 [root@cmpt network-scripts]# 
 ~~~
 
-### Network Configuration `` cmpt.example.com ``
+### Network Configuration ``cmpt.example.com``
 
 ~~~
 [root@cmpt network-scripts]# cat ifcfg-eth1.10 
