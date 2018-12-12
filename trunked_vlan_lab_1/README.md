@@ -4,7 +4,10 @@
 
 ### Router Configureation 
 
-### Below is a very basic configuration example that will provide a NAT gateway for a device with two interfaces.
+~~~
+Below is a very basic configuration example that will provide a NAT gateway for a device with two interfaces.
+~~~
+
 
 ### Enter configuration mode:
 
