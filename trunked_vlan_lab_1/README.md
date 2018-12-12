@@ -112,3 +112,48 @@ PING google.com (216.58.200.142) 56(84) bytes of data.
 64 bytes from maa05s10-in-f14.1e100.net (216.58.200.142): icmp_req=2 ttl=54 time=52.5 ms
 64 bytes from maa05s10-in-f14.1e100.net (216.58.200.142): icmp_req=3 ttl=54 time=70.9 ms
 ~~~
+
+
+## Switch Side Configuration : Cumulus-VX ###
+
+~~~
+net add interface swp1-15 link autoneg on
+~~~
+
+### Adding Bridge to make switch port communicate
+
+~~~
+net add bridge bridge port swp1-15
+~~~
+
+~~~
+net add bridge bridge pvid 1
+~~~
+
+### Trunk Configuration 
+
+~~~ 
+net add interface swp6 bridge trunk vlans 10
+net add interface swp11 bridge trunk vlans 10
+~~~
+
+~~~
+net show interface swp6
+net show interface swp11
+~~~
+
+
+### Check COnfiguration 
+
+~~~
+net show interface
+~~~
+
+~~~
+net show bridge macs
+~~~
+
+~~~
+cat /etc/network/interfaces
+~~~
+
