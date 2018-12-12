@@ -157,3 +157,132 @@ net show bridge macs
 cat /etc/network/interfaces
 ~~~
 
+
+## Server Side Configuration 
+
+### Check Hostname `` ctrl.example.com ``
+
+~~~
+[root@ctrl ~]# hostname
+ctrl.example.com
+[root@ctrl ~]# 
+~~~
+
+### Check IP 
+
+[root@ctrl ~]# ip a
+1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+    inet 127.0.0.1/8 scope host lo
+       valid_lft forever preferred_lft forever
+    inet6 ::1/128 scope host 
+       valid_lft forever preferred_lft forever
+2: eth0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc pfifo_fast state UP group default qlen 1000
+    link/ether 00:50:00:00:03:00 brd ff:ff:ff:ff:ff:ff
+    inet 10.10.10.10/24 brd 10.10.10.255 scope global noprefixroute eth0
+       valid_lft forever preferred_lft forever
+    inet6 fe80::250:ff:fe00:300/64 scope link 
+       valid_lft forever preferred_lft forever
+3: eth1: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc pfifo_fast state UP group default qlen 1000
+    link/ether 00:50:00:00:03:01 brd ff:ff:ff:ff:ff:ff
+4: eth1.10@eth1: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue state UP group default qlen 1000
+    link/ether 00:50:00:00:03:01 brd ff:ff:ff:ff:ff:ff
+    inet 10.1.1.2/24 brd 10.1.1.255 scope global noprefixroute eth1.10
+       valid_lft forever preferred_lft forever
+    inet6 fe80::250:ff:fe00:301/64 scope link 
+       valid_lft forever preferred_lft forever
+[root@ctrl ~]# 
+
+### Network Configuration 
+
+~~~
+[root@ctrl ~]# cat /etc/sysconfig/network-scripts/ifcfg-eth1.10 
+TYPE=vlan  
+BOOTPROTO=none
+NAME=eth1.10
+DEVICE=eth1.10
+ONBOOT=yes
+VLAN=yes
+IPADDR=10.1.1.2
+PREFIX=24
+NETWORK=10.1.1.0
+[root@ctrl ~]# 
+~~~
+
+### Check Hostname `` cmpt.example.com ``
+
+~~~
+[root@cmpt network-scripts]# hostname
+cmpt.example.com
+[root@cmpt network-scripts]# 
+~~~
+
+### Check IP 
+
+~~~
+[root@cmpt network-scripts]# ip a
+1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+    inet 127.0.0.1/8 scope host lo
+       valid_lft forever preferred_lft forever
+    inet6 ::1/128 scope host 
+       valid_lft forever preferred_lft forever
+2: eth0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc pfifo_fast state UP group default qlen 1000
+    link/ether 00:50:00:00:04:00 brd ff:ff:ff:ff:ff:ff
+    inet 10.10.10.20/24 brd 10.10.10.255 scope global noprefixroute eth0
+       valid_lft forever preferred_lft forever
+    inet6 fe80::250:ff:fe00:400/64 scope link 
+       valid_lft forever preferred_lft forever
+3: eth1: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc pfifo_fast state UP group default qlen 1000
+    link/ether 00:50:00:00:04:01 brd ff:ff:ff:ff:ff:ff
+4: eth1.10@eth1: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue state UP group default qlen 1000
+    link/ether 00:50:00:00:04:01 brd ff:ff:ff:ff:ff:ff
+    inet 10.1.1.4/24 brd 10.1.1.255 scope global noprefixroute eth1.10
+       valid_lft forever preferred_lft forever
+    inet6 fe80::250:ff:fe00:401/64 scope link 
+       valid_lft forever preferred_lft forever
+[root@cmpt network-scripts]# 
+~~~
+
+### Network Configuration 
+
+~~~
+[root@cmpt network-scripts]# cat ifcfg-eth1.10 
+TYPE=vlan  
+BOOTPROTO=none
+NAME=eth1.10
+DEVICE=eth1.10
+ONBOOT=yes
+VLAN=yes
+IPADDR=10.1.1.4
+PREFIX=24
+NETWORK=10.1.1.0
+[root@cmpt network-scripts]# 
+~~~
+
+
+## Ping from `` ctrl.example.com `` TO  `` cmpt.example.com `` 
+
+~~~
+[root@ctrl ~]# ping 10.10.10.20 -c 1
+PING 10.10.10.20 (10.10.10.20) 56(84) bytes of data.
+64 bytes from 10.10.10.20: icmp_seq=1 ttl=64 time=1.96 ms
+
+--- 10.10.10.20 ping statistics ---
+1 packets transmitted, 1 received, 0% packet loss, time 0ms
+rtt min/avg/max/mdev = 1.966/1.966/1.966/0.000 ms
+[root@ctrl ~]# 
+~~~
+
+~~~
+[root@cmpt ~]# ping 10.10.10.10 -c 1
+PING 10.10.10.10 (10.10.10.10) 56(84) bytes of data.
+64 bytes from 10.10.10.10: icmp_seq=1 ttl=64 time=1.31 ms
+
+--- 10.10.10.10 ping statistics ---
+1 packets transmitted, 1 received, 0% packet loss, time 0ms
+rtt min/avg/max/mdev = 1.315/1.315/1.315/0.000 ms
+[root@cmpt ~]# 
+~~~
+
+
