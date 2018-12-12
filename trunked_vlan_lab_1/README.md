@@ -192,8 +192,9 @@ ctrl.example.com
     inet6 fe80::250:ff:fe00:301/64 scope link 
        valid_lft forever preferred_lft forever
 [root@ctrl ~]# 
+~~~
 
-### Network Configuration 
+### Network Configuration `` ctrl.example.com `` 
 
 ~~~
 [root@ctrl ~]# cat /etc/sysconfig/network-scripts/ifcfg-eth1.10 
@@ -208,6 +209,7 @@ PREFIX=24
 NETWORK=10.1.1.0
 [root@ctrl ~]# 
 ~~~
+
 
 ### Check Hostname `` cmpt.example.com ``
 
@@ -231,7 +233,7 @@ cmpt.example.com
     link/ether 00:50:00:00:04:00 brd ff:ff:ff:ff:ff:ff
     inet 10.10.10.20/24 brd 10.10.10.255 scope global noprefixroute eth0
        valid_lft forever preferred_lft forever
-    inet6 fe80::250:ff:fe00:400/64 scope link 
+   inet6 fe80::250:ff:fe00:400/64 scope link 
        valid_lft forever preferred_lft forever
 3: eth1: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc pfifo_fast state UP group default qlen 1000
     link/ether 00:50:00:00:04:01 brd ff:ff:ff:ff:ff:ff
@@ -244,7 +246,7 @@ cmpt.example.com
 [root@cmpt network-scripts]# 
 ~~~
 
-### Network Configuration 
+### Network Configuration `` cmpt.example.com ``
 
 ~~~
 [root@cmpt network-scripts]# cat ifcfg-eth1.10 
