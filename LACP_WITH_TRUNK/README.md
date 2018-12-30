@@ -75,6 +75,9 @@ net add bridge bridge pvid 1
 net add bond bond0 bridge trunk vlans 201-204
 ~~~
 
+#### After doing above configuration
+
+![Image ](https://github.com/NileshChandekar/eve_labs/blob/master/LACP_WITH_TRUNK/images/s4.png)
 
 ### Validate the Configuration:
 
