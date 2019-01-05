@@ -5,7 +5,7 @@
 
 ### Router Configuration
 
-![Image ](/home/cNilesh/Redhat/githubprojects/eve_labs/OVS_LACP_TRUNK/images/q1.png)
+![Image ](https://github.com/NileshChandekar/eve_labs/blob/master/OVS_LACP_TRUNK/images/q1.png)
 
 * Interface Configuration :-
 
@@ -48,7 +48,7 @@ set service dns forwarding name-server '8.8.8.8'
 
 ### Switch Configuration
 
-![Image ](/home/cNilesh/Redhat/githubprojects/eve_labs/OVS_LACP_TRUNK/images/q2.png)
+![Image ](https://github.com/NileshChandekar/eve_labs/blob/master/OVS_LACP_TRUNK/images/q2.png)
 
 *  We have ``11`` ports in this switch including ``loopback`` and ``mgmnt``
 
@@ -92,10 +92,10 @@ net add bond bond0 bridge trunk vlans 201-204
 net add bond bond1 bridge trunk vlans 201-204
 ~~~
 
-![Image ](/home/cNilesh/Redhat/githubprojects/eve_labs/OVS_LACP_TRUNK/images/q3.png)
+![Image ](https://github.com/NileshChandekar/eve_labs/blob/master/OVS_LACP_TRUNK/images/q3.png)
 
 
-![Image ](/home/cNilesh/Redhat/githubprojects/eve_labs/OVS_LACP_TRUNK/images/q4.png)
+![Image ](https://github.com/NileshChandekar/eve_labs/blob/master/OVS_LACP_TRUNK/images/q4.png)
 
 ### Server Configuration
 
@@ -257,10 +257,10 @@ vlan_mode           : []
 
 ### Testing
 
-![Image ](/home/cNilesh/Redhat/githubprojects/eve_labs/OVS_LACP_TRUNK/images/q5.png)
+![Image ](https://github.com/NileshChandekar/eve_labs/blob/master/OVS_LACP_TRUNK/images/q5.png)
 
 
-![Image ](/home/cNilesh/Redhat/githubprojects/eve_labs/OVS_LACP_TRUNK/images/q6.png)
+![Image ](https://github.com/NileshChandekar/eve_labs/blob/master/OVS_LACP_TRUNK/images/q6.png)
 
 
-![Image ](/home/cNilesh/Redhat/githubprojects/eve_labs/OVS_LACP_TRUNK/images/q7.png)
+![Image ](https://github.com/NileshChandekar/eve_labs/blob/master/OVS_LACP_TRUNK/images/q7.png)
