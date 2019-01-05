@@ -1,5 +1,9 @@
 # OVS_LACP_TRUNK
 
+
+![Image ](https://github.com/NileshChandekar/eve_labs/blob/master/OVS_LACP_TRUNK/images/q8.png)
+
+
 ### Agenda
 *  The aim of this lab is to create network using `` Openvswitch `` that include ``OVS BOND`` , ``OBS BRIDGE`` and Trunk Port, which will be land from Switch.
 
