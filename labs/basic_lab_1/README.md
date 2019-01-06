@@ -1,8 +1,8 @@
-### Topology 
+### Topology
 
-![Image ](https://github.com/NileshChandekar/eve_labs/blob/master/images/n1.png)
+![Image ](https://github.com/NileshChandekar/eve_labs/blob/master/labs/basic_lab_1/images/n1.png)
 
-### Router Configureation 
+### Router Configureation
 
 ### Below is a very basic configuration example that will provide a NAT gateway for a device with two interfaces.
 
@@ -42,7 +42,7 @@ set nat source rule 10 source address '10.10.10.0/24'
 set nat source rule 10 translation address 'masquerade'
 ~~~
 
-### DNS forwarder: 
+### DNS forwarder:
 
 ~~~
 set service dns forwarding cache-size '0'
@@ -52,25 +52,25 @@ set service dns forwarding name-server '8.8.8.8'
 ~~~
 
 
-![Image ](https://github.com/NileshChandekar/eve_labs/blob/master/images/n2.png)
+![Image ](https://github.com/NileshChandekar/eve_labs/blob/master/labs/basic_lab_1/images/n2.png)
 
 
 
-![Image ](https://github.com/NileshChandekar/eve_labs/blob/master/images/n3.png)
+![Image ](https://github.com/NileshChandekar/eve_labs/blob/master/labs/basic_lab_1/images/n3.png)
 
 
 
-![Image ](https://github.com/NileshChandekar/eve_labs/blob/master/images/n4.png)
+![Image ](https://github.com/NileshChandekar/eve_labs/blob/master/labs/basic_lab_1/images/n4.png)
 
 
 
 
-![Image ](https://github.com/NileshChandekar/eve_labs/blob/master/images/n5.png)
+![Image ](https://github.com/NileshChandekar/eve_labs/blob/master/labs/basic_lab_1/images/n5.png)
 
 
 
-![Image ](https://github.com/NileshChandekar/eve_labs/blob/master/images/n6.png)
+![Image ](https://github.com/NileshChandekar/eve_labs/blob/master/labs/basic_lab_1/images/n6.png)
 
 
 
-![Image ](https://github.com/NileshChandekar/eve_labs/blob/master/images/n10.png)
+![Image ](https://github.com/NileshChandekar/eve_labs/blob/master/labs/basic_lab_1/images/n10.png)
