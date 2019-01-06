@@ -40,7 +40,7 @@ set service dns forwarding name-server '8.8.8.8'
 
 #### We have ``24 Port`` switch device.
 
-![Image ](https://github.com/NileshChandekar/eve_labs/blob/master/LACP_WITH_TRUNK/images/s3.png)
+![Image ](https://github.com/NileshChandekar/eve_labs/blob/master/labs/LACP_WITH_TRUNK/images/s3.png)
 
 
 #### Activate interface
@@ -77,8 +77,8 @@ net add bond bond0 bridge trunk vlans 201-204
 
 #### After doing above configuration
 
-![Image ](https://github.com/NileshChandekar/eve_labs/blob/master/LACP_WITH_TRUNK/images/s4.png)
+![Image ](https://github.com/NileshChandekar/eve_labs/blob/master/labs/LACP_WITH_TRUNK/images/s4.png)
 
 ### Validate the Configuration:
 
-![Image ](https://github.com/NileshChandekar/eve_labs/blob/master/LACP_WITH_TRUNK/images/s5.png)
+![Image ](https://github.com/NileshChandekar/eve_labs/blob/master/labs/LACP_WITH_TRUNK/images/s5.png)
