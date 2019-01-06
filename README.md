@@ -13,4 +13,4 @@
 
   4) [Click Here](https://github.com/NileshChandekar/eve_labs/blob/master/labs/OVS_LACP_TRUNK/README.md) For OVS_LACP_TRUNK Lab - For OVS+bonded+Trunked network configuration
 
-  5) [Click Here](https://github.com/NileshChandekar/eve_labs/blob/master/labs/OVS_LACP_TRUNK/README.md) For Spine and Leaf Lab -
+  5) [Click Here](https://github.com/NileshChandekar/eve_labs/blob/master/labs/Spine_Leaf_OVS_LACP_TRUNK/README.md) For Spine and Leaf Lab -
