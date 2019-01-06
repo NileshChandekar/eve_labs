@@ -1,6 +1,6 @@
 ### Topology
 
-![Image ](https://github.com/NileshChandekar/eve_labs/blob/master/trunked_vlan_lab_1/images/c1.png)
+![Image ](https://github.com/NileshChandekar/eve_labs/blob/master/labs/trunked_vlan_lab_1/images/c1.png)
 
 ### Router Configureation
 
@@ -289,4 +289,4 @@ rtt min/avg/max/mdev = 1.315/1.315/1.315/0.000 ms
 ~~~
 
 
-![Image ](https://github.com/NileshChandekar/eve_labs/blob/master/trunked_vlan_lab_1/images/c2.png)
+![Image ](https://github.com/NileshChandekar/eve_labs/blob/master/labs/trunked_vlan_lab_1/images/c2.png)
