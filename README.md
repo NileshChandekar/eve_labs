@@ -10,3 +10,6 @@
   3) [Click Here](https://github.com/NileshChandekar/eve_labs/blob/master/lacp_lab_vyos_cumulus/README.md) For LACP Lab - For bonded network configuration
 
   3) [Click Here](https://github.com/NileshChandekar/eve_labs/blob/master/LACP_WITH_TRUNK/README.md) For LACP_WITH_TRUNK Lab - For bonded+Trunked network configuration
+
+
+  4) [Click Here](https://github.com/NileshChandekar/eve_labs/blob/master/OVS_LACP_TRUNK/README.md) For OVS_LACP_TRUNK Lab - For OVS+bonded+Trunked network configuration
