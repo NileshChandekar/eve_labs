@@ -268,3 +268,5 @@ vlan_mode           : []
 
 
 ![Image ](https://github.com/NileshChandekar/eve_labs/blob/master/OVS_LACP_TRUNK/images/q7.png)
+
+![Image ](https://github.com/NileshChandekar/eve_labs/blob/master/OVS_LACP_TRUNK/images/q9.png)
